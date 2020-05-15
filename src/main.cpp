@@ -35,17 +35,29 @@ void lightItUp(const int leds)
   if (leds == 1)
   {
     digitalWrite(LEDONE, HIGH);
+    digitalWrite(LEDTWO, LOW);
+    digitalWrite(LEDTHREE, LOW);
+    digitalWrite(LEDFOUR, LOW);
+    digitalWrite(LEDFIVE, LOW);
+    digitalWrite(LEDSIX, LOW);
   }
   if (leds == 2)
   {
     digitalWrite(LEDONE, HIGH);
     digitalWrite(LEDTWO, HIGH);
+    digitalWrite(LEDTHREE, LOW);
+    digitalWrite(LEDFOUR, LOW);
+    digitalWrite(LEDFIVE, LOW);
+    digitalWrite(LEDSIX, LOW);
   }
   if (leds == 3)
   {
     digitalWrite(LEDONE, HIGH);
     digitalWrite(LEDTWO, HIGH);
     digitalWrite(LEDTHREE, HIGH);
+    digitalWrite(LEDFOUR, LOW);
+    digitalWrite(LEDFIVE, LOW);
+    digitalWrite(LEDSIX, LOW);
   }
   if (leds == 4)
   {
@@ -53,6 +65,8 @@ void lightItUp(const int leds)
     digitalWrite(LEDTWO, HIGH);
     digitalWrite(LEDTHREE, HIGH);
     digitalWrite(LEDFOUR, HIGH);
+    digitalWrite(LEDFIVE, LOW);
+    digitalWrite(LEDSIX, LOW);
   }
   if (leds == 5)
   {
@@ -61,6 +75,7 @@ void lightItUp(const int leds)
     digitalWrite(LEDTHREE, HIGH);
     digitalWrite(LEDFOUR, HIGH);
     digitalWrite(LEDFIVE, HIGH);
+    digitalWrite(LEDSIX, LOW);
   }
   if (leds == 6)
   {
@@ -119,6 +134,7 @@ void setup()
   pinMode(LEDSIX, OUTPUT);
   pinMode(LED_BUILTIN, OUTPUT);
   startUp();
+  lightItUp(0);
 }
 
 void loop()
